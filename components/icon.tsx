@@ -7,6 +7,6 @@ type Props = {
   size?: number;
 };
 
-export function Icon({ icon }: Props) {
-  return <Image src={require(`public/${icon}.svg`)} alt="icon" />;
+export function Icon({ icon, size }: Props) {
+  return <Image src={require(`public/${icon}.svg`)} alt="icon" width={size} />;
 }

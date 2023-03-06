@@ -15,6 +15,12 @@ export default function Home() {
         <Icon icon="vacation" />
         <Icon icon="sick" />
       </div>
+
+      <div className={styles.iconsContainer}>
+        <span>icons: </span>
+        <Icon icon="vacation" size={200} />
+        <Icon icon="sick" size={200} />
+      </div>
     </main>
   );
 }
