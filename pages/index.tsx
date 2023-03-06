@@ -15,6 +15,12 @@ export default function Home() {
         <Icon icon="vacation" />
         <Icon icon="sick" />
       </div>
+
+      <div className={styles.iconsContainer}>
+        <span>icons: </span>
+        <Icon icon="vacation" size={200} />
+        <Icon icon="sick" size={200} />
+      </div>
     </main>
   );
 }
@@ -30,11 +36,13 @@ const styles = {
   iconsContainer: css({
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     border: '1px solid red',
   }),
   redIconsContainer: css({
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     border: '1px solid red',
 
     color: 'red',
