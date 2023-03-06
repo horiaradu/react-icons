@@ -1,4 +1,11 @@
-import Image from 'next/image';
+import Sick from '@/public/sick.svg';
+import Vacation from '@/public/vacation.svg';
+import React from 'react';
+
+const IconDefs = {
+  vacation: Vacation,
+  sick: Sick,
+};
 
 type Icons = 'vacation' | 'sick';
 
@@ -8,5 +15,8 @@ type Props = {
 };
 
 export function Icon({ icon, size }: Props) {
-  return <Image src={require(`public/${icon}.svg`)} alt="icon" width={size} />;
+  return React.createElement(IconDefs[icon], {
+    alt: 'icon',
+    ...(size && { width: size, height: size }),
+  });
 }
