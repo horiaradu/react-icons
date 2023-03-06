@@ -1,16 +1,22 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import { css } from 'goober';
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>React Icons</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <p>hi!</p>
-      </main>
-    </>
+    <main className={styles.main}>
+      <div className={styles.iconsContainer}></div>
+    </main>
   );
 }
+
+const styles = {
+  main: css({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }),
+  iconsContainer: css({
+    display: 'flex',
+    justifyContent: 'space-between',
+    border: '1px solid red',
+  }),
+};
