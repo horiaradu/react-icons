@@ -16,7 +16,6 @@ type Props = {
 
 export function Icon({ icon, size }: Props) {
   return React.createElement(IconDefs[icon], {
-    alt: 'icon',
     width: size,
     height: size,
   });
