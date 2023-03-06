@@ -1,6 +1,13 @@
-import Image from 'next/image';
+import React from 'react';
+import { Sick } from './sick';
+import { Vacation } from './vacation';
 
-type Icons = 'vacation' | 'sick';
+const IconDefs = {
+  vacation: Vacation,
+  sick: Sick,
+};
+
+type Icons = keyof typeof IconDefs;
 
 type Props = {
   icon: Icons;
@@ -8,5 +15,9 @@ type Props = {
 };
 
 export function Icon({ icon, size }: Props) {
-  return <Image src={require(`public/${icon}.svg`)} alt="icon" width={size} />;
+  return React.createElement(IconDefs[icon], {
+    alt: 'icon',
+    width: size,
+    height: size,
+  });
 }
